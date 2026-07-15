@@ -200,7 +200,7 @@ nav {
   height: auto;
   margin-bottom: 1.25rem;
   mix-blend-mode: screen;
-  filter: drop-shadow(0 0 40px rgba(138,184,122,.5));
+  filter: sepia(1) hue-rotate(85deg) saturate(2.5) brightness(2.2) drop-shadow(0 0 40px rgba(138,184,122,.8));
 }
 
 .hero-meta {
