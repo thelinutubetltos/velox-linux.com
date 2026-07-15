@@ -196,11 +196,12 @@ nav {
 }
 
 .hero-icon {
-  width: 180px;
+  width: 200px;
   height: auto;
   border-radius: 24px;
   margin-bottom: 1.25rem;
-  filter: drop-shadow(0 0 30px rgba(138,184,122,.4));
+  mix-blend-mode: screen;
+  filter: drop-shadow(0 0 30px rgba(138,184,122,.5));
 }
 
 .hero-meta {
