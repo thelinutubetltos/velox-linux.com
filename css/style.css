@@ -883,6 +883,10 @@ nav {
 .desktop-card-icon {
   font-size: 2rem;
   margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 52px;
 }
 
 .desktop-card h3 {
