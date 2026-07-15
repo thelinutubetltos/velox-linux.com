@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>XFCE — Velox Linux</title>
+  <meta name="description" content="Velox Linux XFCE desktop — labwc Wayland compositor with waybar, Crystal Dock, and Fluent-Velox-Dark theming." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .de-hero {
+      padding: 5rem 2rem 3rem;
+      max-width: 960px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .de-hero .section-label {
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+    .de-hero h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+    .de-hero h1 span { color: var(--green); }
+    .de-hero p {
+      font-size: 1.1rem;
+      color: var(--text-dim);
+      max-width: 640px;
+      margin: 0 auto 2rem;
+    }
+    .de-tags {
+      display: flex;
+      gap: .6rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+    .de-tag {
+      background: var(--green-bg);
+      color: var(--green);
+      border: 1px solid var(--green-dim);
+      border-radius: 20px;
+      padding: .3rem .9rem;
+      font-size: .8rem;
+      font-weight: 600;
+      letter-spacing: .04em;
+    }
+
+    .screenshots {
+      max-width: 1100px;
+      margin: 0 auto 5rem;
+      padding: 0 2rem;
+    }
+    .screenshots h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: var(--text);
+    }
+    .screenshot-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+      gap: 1.5rem;
+    }
+    .screenshot-item {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: var(--card);
+    }
+    .screenshot-item img {
+      width: 100%;
+      display: block;
+    }
+    .screenshot-item figcaption {
+      padding: .75rem 1rem;
+      font-size: .85rem;
+      color: var(--text-dim);
+    }
+
+    .de-detail {
+      max-width: 960px;
+      margin: 0 auto 5rem;
+      padding: 0 2rem;
+    }
+    .de-detail h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: .5rem;
+      color: var(--text);
+    }
+    .de-detail .section-intro {
+      color: var(--text-dim);
+      margin-bottom: 2rem;
+      font-size: 1rem;
+    }
+    .detail-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+    .detail-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+    }
+    .detail-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--green);
+      margin-bottom: .75rem;
+    }
+    .detail-card p {
+      font-size: .9rem;
+      color: var(--text-dim);
+      line-height: 1.6;
+    }
+    .detail-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .detail-card ul li {
+      font-size: .9rem;
+      color: var(--text-dim);
+      padding: .3rem 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+    }
+    .detail-card ul li:last-child { border-bottom: none; }
+    .detail-card ul li::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--green);
+      flex-shrink: 0;
+    }
+
+    .color-row {
+      display: flex;
+      gap: .75rem;
+      flex-wrap: wrap;
+      margin-top: .75rem;
+    }
+    .color-chip {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      font-size: .8rem;
+      color: var(--text-dim);
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .color-swatch {
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      color: var(--text-dim);
+      font-size: .9rem;
+      margin: 2rem 2rem 0;
+      transition: color .2s;
+    }
+    .back-link:hover { color: var(--green); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<!-- ─── NAV ─── -->
+<nav>
+  <a class="nav-logo" href="index.html">Velox Linux</a>
+  <ul class="nav-links">
+    <li><a href="index.html#new-to-linux">New to Linux?</a></li>
+    <li><a href="index.html#control-center">Control Center</a></li>
+    <li><a href="index.html#desktops">Desktops</a></li>
+    <li><a href="index.html#download" class="nav-cta">Download</a></li>
+  </ul>
+</nav>
+
+<a class="back-link" href="index.html">← Back to Velox Linux</a>
+
+<!-- ─── HERO ─── -->
+<section class="de-hero">
+  <span class="section-label">Desktop Environment</span>
+  <h1><span>XFCE</span></h1>
+  <p>Lightweight, fast, and fully Wayland. labwc compositor with a waybar top panel, Crystal Dock bottom dock, and nwg-drawer app launcher — all styled with Velox dark-green colors.</p>
+  <div class="de-tags">
+    <span class="de-tag">labwc</span>
+    <span class="de-tag">Wayland</span>
+    <span class="de-tag">waybar</span>
+    <span class="de-tag">Crystal Dock</span>
+    <span class="de-tag">Fluent-grey-Light</span>
+    <span class="de-tag">nwg-drawer</span>
+  </div>
+</section>
+
+<!-- ─── SCREENSHOTS ─── -->
+<section class="screenshots">
+  <h2>Screenshots</h2>
+  <div class="screenshot-grid">
+    <figure class="screenshot-item">
+      <img src="img/xfce-de-1.png" alt="Velox XFCE desktop overview" />
+      <figcaption>Desktop overview — waybar top panel, Crystal Dock bottom, Velox green accents</figcaption>
+    </figure>
+    <figure class="screenshot-item">
+      <img src="img/xfce-de-2.png" alt="Velox XFCE with apps and launcher" />
+      <figcaption>nwg-drawer app launcher and open applications</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ─── WHAT WE DID ─── -->
+<section class="de-detail">
+  <h2>What was customised</h2>
+  <p class="section-intro">XFCE on Velox replaces the standard xfce4-panel (which doesn't anchor properly on Wayland) with a purpose-built stack for a clean, responsive Wayland experience.</p>
+  <div class="detail-grid">
+
+    <div class="detail-card">
+      <h3>Compositor — labwc</h3>
+      <p>labwc is a lightweight wlroots-based Wayland compositor that handles window management, keybindings, and the right-click desktop menu. It uses the Openbox theme format — Velox ships a custom <strong>Velox-Dark</strong> labwc theme with green hover highlights.</p>
+    </div>
+
+    <div class="detail-card">
+      <h3>Top Panel — waybar</h3>
+      <p>waybar replaces xfce4-panel for Wayland compatibility. It's launched with <code>GTK_THEME=Adwaita</code> to prevent the system GTK theme from overriding the custom CSS. The bar uses Velox dark background with <strong>#8ab87a</strong> green for all module icons and indicators.</p>
+    </div>
+
+    <div class="detail-card">
+      <h3>Bottom Dock — Crystal Dock</h3>
+      <p>Crystal Dock provides the bottom application dock with a glass-style appearance. Configured with 6 launchers, Velox neon green active indicators, and a near-black transparent background. Restricted to XFCE sessions only via <code>OnlyShowIn=XFCE;</code> so it doesn't appear on KDE or Cinnamon.</p>
+    </div>
+
+    <div class="detail-card">
+      <h3>App Launcher — nwg-drawer</h3>
+      <p>nwg-drawer provides a full-screen app grid launcher, invoked from the waybar launcher button. Themed with <code>GTK_THEME=Fluent-grey-Light</code> for a clean contrast against the dark desktop.</p>
+    </div>
+
+    <div class="detail-card">
+      <h3>Right-click Desktop Menu</h3>
+      <p>labwc controls the desktop right-click menu via <code>menu.xml</code>. The Velox-Dark theme applies green hover highlights — the theme file lives at <code>labwc/themerc</code> (not <code>openbox-3/themerc</code>) which is required for labwc 0.20+.</p>
+    </div>
+
+    <div class="detail-card">
+      <h3>GTK Theme &amp; Icons</h3>
+      <p>GTK apps use <strong>Fluent-Velox-Dark</strong> set via <code>GTK_THEME</code> environment variable — the most reliable method for Wayland sessions. Icons use the <strong>Newaita</strong> pack with custom Velox-green folder overrides in a local <code>Newaita-Velox</code> theme layer.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── THEMING INFO ─── -->
+<section class="de-detail">
+  <h2>Theming details</h2>
+  <p class="section-intro">Technical reference for the colors and components used across the XFCE desktop.</p>
+  <div class="detail-grid">
+
+    <div class="detail-card">
+      <h3>Colors</h3>
+      <div class="color-row">
+        <span class="color-chip"><span class="color-swatch" style="background:#8ab87a;"></span>#8ab87a — Velox green (muted)</span>
+      </div>
+      <div class="color-row">
+        <span class="color-chip"><span class="color-swatch" style="background:#39ff14;"></span>#39ff14 — Crystal Dock active indicator</span>
+      </div>
+      <div class="color-row">
+        <span class="color-chip"><span class="color-swatch" style="background:#0f0b0d; border-color:#444;"></span>#0f0b0d — Crystal Dock background</span>
+      </div>
+      <div class="color-row">
+        <span class="color-chip"><span class="color-swatch" style="background:#2b2b2b; border-color:#444;"></span>rgba(43,43,43,0.97) — Waybar background</span>
+      </div>
+    </div>
+
+    <div class="detail-card">
+      <h3>Components</h3>
+      <ul>
+        <li>Compositor: labwc (Velox-Dark theme)</li>
+        <li>Top bar: waybar (custom CSS)</li>
+        <li>Bottom dock: Crystal Dock (glass style)</li>
+        <li>App launcher: nwg-drawer</li>
+        <li>Wallpaper: swaybg (Velox-7)</li>
+        <li>GTK theme: Fluent-Velox-Dark</li>
+        <li>Icons: Newaita-Velox</li>
+        <li>Cursor: Breeze</li>
+        <li>Font: Noto Sans 10pt</li>
+      </ul>
+    </div>
+
+    <div class="detail-card">
+      <h3>Waybar modules</h3>
+      <ul>
+        <li>Velox logo launcher button (image module)</li>
+        <li>Network status</li>
+        <li>Volume control</li>
+        <li>Battery indicator</li>
+        <li>Keyboard layout</li>
+        <li>Clock</li>
+        <li>System tray (28px icons)</li>
+        <li>Power menu</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer style="text-align:center; padding: 3rem 2rem; color: var(--text-muted); font-size:.85rem; border-top: 1px solid var(--border); margin-top: 2rem;">
+  <p>Velox Linux &nbsp;·&nbsp; <a href="index.html">Back to main site</a> &nbsp;·&nbsp; <a href="https://github.com/thelinutubetltos/velox-iso" target="_blank" rel="noopener">GitHub</a></p>
+</footer>
+
+</body>
+</html>
