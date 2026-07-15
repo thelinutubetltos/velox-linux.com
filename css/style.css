@@ -517,8 +517,168 @@ nav {
   margin: 0;
 }
 
+/* ─── KERNEL SECTION ─── */
+.kernel-section {
+  padding: 6rem 2rem;
+}
+
+.kernel-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.kernel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin-top: 3rem;
+}
+
+.kernel-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  transition: border-color .2s, transform .2s;
+}
+
+.kernel-card:hover {
+  border-color: var(--green-dim);
+  transform: translateY(-2px);
+}
+
+.kernel-card.highlight-card {
+  border-color: var(--green-dim);
+  background: linear-gradient(135deg, var(--green-bg) 0%, var(--card) 60%);
+}
+
+.kernel-card h3 {
+  font-size: .95rem;
+  font-weight: 600;
+  margin: .6rem 0 .4rem;
+}
+
+.kernel-card p {
+  font-size: .85rem;
+  color: var(--text-dim);
+  line-height: 1.65;
+}
+
+.kernel-card code {
+  background: rgba(255,255,255,.06);
+  border: 1px solid var(--border);
+  padding: .1rem .35rem;
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .8em;
+}
+
+/* ─── UNDER THE HOOD ─── */
+.hood {
+  background: var(--bg2);
+  padding: 6rem 2rem;
+}
+
+.hood-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.hood-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.25rem;
+  margin-top: 3rem;
+}
+
+.hood-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  transition: border-color .2s;
+}
+
+.hood-card:hover { border-color: var(--green-dim); }
+
+.hood-icon {
+  font-size: 1.4rem;
+  margin-bottom: .6rem;
+}
+
+.hood-card h3 {
+  font-size: .95rem;
+  font-weight: 700;
+  margin-bottom: .5rem;
+  color: var(--text);
+}
+
+.hood-card p {
+  font-size: .84rem;
+  color: var(--text-dim);
+  line-height: 1.68;
+}
+
+.hood-card code {
+  background: rgba(255,255,255,.06);
+  border: 1px solid var(--border);
+  padding: .1rem .35rem;
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .8em;
+}
+
+/* ─── WINDOWS WELCOME ─── */
+.windows-welcome {
+  padding: 6rem 2rem;
+  background: linear-gradient(180deg, var(--bg) 0%, rgba(26,42,22,.3) 100%);
+}
+
+.windows-welcome-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.welcome-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+  margin-top: 3rem;
+}
+
+.welcome-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  transition: border-color .2s, transform .2s;
+}
+
+.welcome-card:hover {
+  border-color: var(--green-dim);
+  transform: translateY(-2px);
+}
+
+.welcome-card .welcome-icon {
+  font-size: 1.75rem;
+  margin-bottom: .75rem;
+}
+
+.welcome-card h3 {
+  font-size: .95rem;
+  font-weight: 600;
+  margin-bottom: .4rem;
+}
+
+.welcome-card p {
+  font-size: .85rem;
+  color: var(--text-dim);
+  line-height: 1.65;
+}
+
 @media (max-width: 780px) {
   .fix-grid { grid-template-columns: 1fr; }
+  .hood-grid { grid-template-columns: 1fr; }
 }
 
 /* ─── SCREENSHOTS ─── */

@@ -22,7 +22,7 @@
     Velox Linux
   </a>
   <ul class="nav-links">
-    <li><a href="#features">Features</a></li>
+    <li><a href="#new-to-linux">New to Linux?</a></li>
     <li><a href="#control-center">Control Center</a></li>
     <li><a href="#security">Security</a></li>
     <li><a href="#desktops">Desktops</a></li>
@@ -35,12 +35,65 @@
   <div class="badge">v8.2 "Horny Rhino" — Now Available</div>
   <img src="img/velox-logo.png" alt="Velox Linux" class="hero-logo" />
   <h1>Shape It. Race It. <span>Own It.</span></h1>
-  <p>Velox is an Arch-based rolling-release distro built for creators, gamers, and power users — beautiful, fast, and secure right out of the box.</p>
+  <p>Velox is an Arch-based rolling-release distro built for everyone — whether you're escaping Windows for the first time or a power user who wants a fast, secure, no-compromises system.</p>
   <div class="btn-row">
     <a href="#download" class="btn btn-primary">⬇ Download v8.2</a>
     <a href="https://github.com/thelinutubetltos/velox-iso" class="btn btn-ghost" target="_blank" rel="noopener">GitHub →</a>
   </div>
   <p class="hero-meta">Arch-based &nbsp;·&nbsp; Rolling release &nbsp;·&nbsp; Wayland-first &nbsp;·&nbsp; Free &amp; open-source</p>
+</section>
+
+<!-- ─── WINDOWS WELCOME ─── -->
+<section class="windows-welcome" id="new-to-linux">
+  <div class="windows-welcome-inner">
+    <div class="section-header">
+      <span class="section-label">New to Linux?</span>
+      <h2>Coming from Windows? You're going to feel right at home.</h2>
+      <p>Velox was designed so you don't need to know what a terminal is to have a great system. Everything you expect is already there.</p>
+    </div>
+    <div class="welcome-grid">
+      <div class="welcome-card">
+        <div class="welcome-icon">🪟</div>
+        <h3>Familiar Desktop Layout</h3>
+        <p>Taskbar at the bottom, app launcher, system tray, clock — Velox's KDE and Cinnamon desktops look and feel like what you're already used to. No relearning how to use a computer.</p>
+      </div>
+      <div class="welcome-card">
+        <div class="welcome-icon">🖱</div>
+        <h3>Graphical Installer</h3>
+        <p>Click through the Calamares installer just like any Windows setup wizard. Pick your language, timezone, username, and partition — done. No commands, no config files.</p>
+      </div>
+      <div class="welcome-card">
+        <div class="welcome-icon">🎮</div>
+        <h3>Your Apps Are Already Here</h3>
+        <p>Steam, Firefox, VLC, Discord, OBS Studio, GIMP, VS Code — all pre-installed or one click away. If you used it on Windows, there's a good chance it runs on Velox.</p>
+      </div>
+      <div class="welcome-card">
+        <div class="welcome-icon">🔄</div>
+        <h3>Updates That Don't Surprise You</h3>
+        <p>One-click system updates from the Velox Control Center. No restart required for most updates, no Windows Update rebooting you mid-project. You update when you want to.</p>
+      </div>
+      <div class="welcome-card">
+        <div class="welcome-icon">🎯</div>
+        <h3>Software Center Built In</h3>
+        <p>Search and install thousands of apps from the Velox Control Center — no need to find websites, download EXEs, or click through installers. It's like an app store, but everything is free.</p>
+      </div>
+      <div class="welcome-card">
+        <div class="welcome-icon">🛡</div>
+        <h3>No Antivirus Required</h3>
+        <p>Linux doesn't need antivirus software. Malware that targets Windows simply doesn't run here. Velox adds its own AUR scanner on top for an extra layer of peace of mind.</p>
+      </div>
+      <div class="welcome-card">
+        <div class="welcome-icon">💰</div>
+        <h3>Completely Free — Forever</h3>
+        <p>No license fees, no subscriptions, no activation keys. Velox Linux is open-source software and always will be. Download it, install it, and keep it as long as you want.</p>
+      </div>
+      <div class="welcome-card">
+        <div class="welcome-icon">⚡</div>
+        <h3>Your Old PC Feels New Again</h3>
+        <p>Velox runs fast on hardware that Windows 11 struggles on. The linux-velox kernel and performance tuning mean even older machines get a second life with smooth, responsive performance.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- ─── WHAT IS VELOX ─── -->
@@ -183,6 +236,117 @@
           <span class="solution-label">The Fix</span>
           Every time you install a pacman package through the Control Center, it checks when the package database was last synced. If it's been over 1 hour, a warning dialog appears offering to run a full <code>pacman -Syu</code> first — preventing the most common cause of broken Arch installations.
         </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── KERNEL / PERFORMANCE ─── -->
+<section class="kernel-section">
+  <div class="kernel-inner">
+    <div class="section-header">
+      <span class="section-label">Performance</span>
+      <h2>Built on the CachyOS kernel</h2>
+      <p>Velox ships <strong>linux-velox</strong> — a custom kernel forked from CachyOS with every performance patch the upstream team has spent years tuning.</p>
+    </div>
+    <div class="kernel-grid">
+      <div class="kernel-card highlight-card">
+        <div class="feature-icon">⚡</div>
+        <h3>BORE + EEVDF Scheduler</h3>
+        <p>CachyOS's Burst-Oriented Response Enhancer scheduler on top of EEVDF dramatically improves desktop responsiveness and frame consistency under mixed workloads — gaming while compiling, streaming while gaming.</p>
+      </div>
+      <div class="kernel-card">
+        <div class="feature-icon">🔧</div>
+        <h3>1000Hz Tick Rate</h3>
+        <p>Tuned to 1000Hz (vs 300Hz default) for lower input latency and smoother animation. Every keypress and mouse event gets a faster response from the kernel.</p>
+      </div>
+      <div class="kernel-card">
+        <div class="feature-icon">🧠</div>
+        <h3>Preemptive Kernel</h3>
+        <p>Full preemption enabled — the kernel can interrupt itself to service higher-priority tasks. Eliminates stutters when background work competes with your foreground app.</p>
+      </div>
+      <div class="kernel-card">
+        <div class="feature-icon">💾</div>
+        <h3>Zram Swap</h3>
+        <p>RAM-backed compressed swap with <code>zstd</code> compression. Effectively multiplies usable RAM before touching disk — system stays snappy even when memory is under pressure.</p>
+      </div>
+      <div class="kernel-card">
+        <div class="feature-icon">🗂</div>
+        <h3>Ananicy-cpp Process Tuning</h3>
+        <p>CachyOS's ananicy-cpp rules automatically assign CPU priorities and scheduling classes to hundreds of known processes — games get high priority, background daemons get low.</p>
+      </div>
+      <div class="kernel-card">
+        <div class="feature-icon">🔒</div>
+        <h3>Locked to Performance Governor</h3>
+        <p>CPU governor is pinned to <code>performance</code> on boot. No throttling, no frequency scaling delays — the CPU runs at full speed, ready to respond instantly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── UNDER THE HOOD ─── -->
+<section class="hood">
+  <div class="hood-inner">
+    <div class="section-header">
+      <span class="section-label">Under the Hood</span>
+      <h2>The fixes that make the difference</h2>
+      <p>Every distro ships software. We fixed the things that actually break the experience.</p>
+    </div>
+    <div class="hood-grid">
+
+      <div class="hood-card">
+        <div class="hood-icon">🞄</div>
+        <h3>ksmoothdock — Always in the Right Place</h3>
+        <p>KDE Plasma 6 on Wayland ignores dock position hints from native Wayland apps. ksmoothdock was landing wherever it wanted on every boot. We force it into XWayland mode (<code>QT_QPA_PLATFORM=xcb</code>) so KWin obeys EWMH positioning, add a 3-second delayed start so KDE finishes applying your monitor resolution before the dock calculates its position, and wrap it in a restart loop so it survives screen lock. Result: bottom-center, every single boot.</p>
+      </div>
+
+      <div class="hood-card">
+        <div class="hood-icon">🖥</div>
+        <h3>SDDM Wayland Compositor Fix</h3>
+        <p>SDDM with <code>DisplayServer=wayland</code> tries to launch <code>weston</code> if no compositor is specified — weston isn't installed, so SDDM just hangs. We wire in <code>CompositorCommand=kwin_wayland --no-lockscreen</code> explicitly. The login screen uses KWin directly, avoiding DRM permission errors when the user session starts its own KWin on top.</p>
+      </div>
+
+      <div class="hood-card">
+        <div class="hood-icon">🎨</div>
+        <h3>Glass Hover Effects — Hand-crafted SVGs</h3>
+        <p>KDE's default Leaf theme had invisible list item hover states (opacity set to 0.001 with no fill). We rebuilt KvDark.svg, viewitem.svg, listitem.svg, button.svg, and actionbutton.svg with green (#8ab87a) glass hover effects — white frame borders at correct opacity for depth, green left-edge accent strip, translucent background. Every hover state in KDE now has consistent Velox styling.</p>
+      </div>
+
+      <div class="hood-card">
+        <div class="hood-icon">🌿</div>
+        <h3>Cinnamon 6 Glass Menus</h3>
+        <p>Cinnamon 6 renamed all shell widget classes from <code>menu-*</code> to <code>appmenu-*</code> — most third-party themes still target the old names and get nothing. We rewrote the CSS targeting the correct Cinnamon 6 class names across app launchers, categories, taskbar buttons, panel buttons, system tray, workspace switcher, and popup menus. Glass hover with green left-edge accent throughout.</p>
+      </div>
+
+      <div class="hood-card">
+        <div class="hood-icon">🪟</div>
+        <h3>XFCE Wayland Panel — Real Screen Anchoring</h3>
+        <p>xfce4-panel on Arch is not compiled with <code>gtk-layer-shell</code>, so it floats as a regular window instead of anchoring to the screen edge. Plank is X11-only. We replaced xfce4-panel with <code>waybar</code> (top) and <code>crystal-dock</code> (bottom) — both have native Wayland layer-shell support and are launched via autostart with <code>GTK_THEME=Adwaita</code> to prevent the system GTK theme from overriding our custom CSS colors.</p>
+      </div>
+
+      <div class="hood-card">
+        <div class="hood-icon">🖱</div>
+        <h3>XFCE Right-click Menu Theme</h3>
+        <p>labwc (the Wayland compositor powering XFCE Wayland) looks for themes at <code>labwc/themerc</code> — not <code>openbox-3/themerc</code> like older documentation says. Every existing XFCE Wayland theme ships in the wrong path, gets silently ignored, and the right-click menu falls back to plain white. We wrote the Velox-Dark labwc theme in the correct path with green highlight colors.</p>
+      </div>
+
+      <div class="hood-card">
+        <div class="hood-icon">🖼</div>
+        <h3>Background Picker — All 15 Wallpapers</h3>
+        <p>Cinnamon's wallpaper picker scans <code>/usr/share/gnome-background-properties/</code> for XML descriptors — it ignores image files that don't have one, even if they're installed. We ship <code>velox.xml</code> pointing to all 15 Velox wallpapers, and run a post-install cleanup script that strips wallpapers from other packages (installed by Cinnamon's dependencies) so only Velox wallpapers appear in the picker.</p>
+      </div>
+
+      <div class="hood-card">
+        <div class="hood-icon">🔲</div>
+        <h3>Calamares — No Window Decorations</h3>
+        <p>The Calamares installer was showing a white OpenBox title bar and border frame around the window — a mismatch with the dark themed installer content. Qt stylesheet rules don't touch window manager chrome. The fix is an OpenBox application rule with <code>decor=no</code> targeting the class <code>"calamares"</code> (lowercase — WM_CLASS is all lowercase; using a capital C silently fails to match).</p>
+      </div>
+
+      <div class="hood-card">
+        <div class="hood-icon">💿</div>
+        <h3>BTRFS in the Installer</h3>
+        <p>The Calamares partitioner defaulted to only offering ext4, despite btrfs-progs being installed and the installer slideshow advertising BTRFS snapshot support. One missing <code>"btrfs"</code> entry in <code>partition.conf</code>'s <code>availableFileSystemTypes</code> array was hiding it. Now BTRFS is a first-class option in the partitioner alongside ext4.</p>
       </div>
 
     </div>
