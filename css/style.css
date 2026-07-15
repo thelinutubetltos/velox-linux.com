@@ -58,10 +58,8 @@ nav {
   text-decoration: none;
 }
 
-.nav-v {
-  color: var(--green);
-  font-size: 1.35rem;
-  font-weight: 800;
+.nav-logo {
+  color: var(--green) !important;
 }
 
 .nav-links {
