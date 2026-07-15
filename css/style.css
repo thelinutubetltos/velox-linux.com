@@ -195,11 +195,13 @@ nav {
   transform: translateY(-1px);
 }
 
-.hero-logo {
-  width: 120px;
-  height: auto;
-  margin-bottom: 1.5rem;
-  filter: drop-shadow(0 0 30px rgba(138,184,122,.3));
+.hero-icon {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 18px;
+  margin-bottom: 1.25rem;
+  filter: drop-shadow(0 0 24px rgba(138,184,122,.5));
 }
 
 .hero-meta {
