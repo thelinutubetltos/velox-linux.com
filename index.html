@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Velox Linux — Fast. Minimal. Yours.</title>
-  <meta name="description" content="Velox Linux is a rolling-release, Arch-based distribution with KDE Plasma, Cinnamon, and XFCE desktops — built for speed and simplicity." />
+  <title>Velox Linux — Shape It. Race It. Own It.</title>
+  <meta name="description" content="Velox Linux is a rolling-release, Arch-based distribution with KDE Plasma, Cinnamon, and XFCE desktops — built for speed, security, and simplicity." />
   <meta property="og:title" content="Velox Linux" />
-  <meta property="og:description" content="Fast, minimal, Arch-based Linux with your choice of desktop." />
+  <meta property="og:description" content="Fast, secure, Arch-based Linux with your choice of desktop." />
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,12 +18,14 @@
 <!-- ─── NAV ─── -->
 <nav>
   <a class="nav-logo" href="#">
-    <span class="leaf">🌿</span> Velox Linux
+    <img src="img/velox-logo.png" alt="Velox Linux" class="nav-logo-img" />
+    Velox Linux
   </a>
   <ul class="nav-links">
     <li><a href="#features">Features</a></li>
+    <li><a href="#control-center">Control Center</a></li>
+    <li><a href="#security">Security</a></li>
     <li><a href="#desktops">Desktops</a></li>
-    <li><a href="#requirements">Requirements</a></li>
     <li><a href="#download" class="nav-cta">Download</a></li>
   </ul>
 </nav>
@@ -31,56 +33,217 @@
 <!-- ─── HERO ─── -->
 <section class="hero">
   <div class="badge">v8.2 "Horny Rhino" — Now Available</div>
-  <h1>Linux Built for <span>Speed</span> and Simplicity</h1>
-  <p>Velox is an Arch-based rolling-release distro with a polished installer, three curated desktops, and a clean Velox look right out of the box.</p>
+  <img src="img/velox-logo.png" alt="Velox Linux" class="hero-logo" />
+  <h1>Shape It. Race It. <span>Own It.</span></h1>
+  <p>Velox is an Arch-based rolling-release distro built for creators, gamers, and power users — beautiful, fast, and secure right out of the box.</p>
   <div class="btn-row">
-    <a href="#download" class="btn btn-primary">
-      ⬇ Download v8.2
-    </a>
-    <a href="https://github.com/thelinuxtubetltos/velox-iso" class="btn btn-ghost" target="_blank" rel="noopener">
-      GitHub →
-    </a>
+    <a href="#download" class="btn btn-primary">⬇ Download v8.2</a>
+    <a href="https://github.com/thelinutubetltos/velox-iso" class="btn btn-ghost" target="_blank" rel="noopener">GitHub →</a>
   </div>
   <p class="hero-meta">Arch-based &nbsp;·&nbsp; Rolling release &nbsp;·&nbsp; Wayland-first &nbsp;·&nbsp; Free &amp; open-source</p>
 </section>
 
+<!-- ─── WHAT IS VELOX ─── -->
+<section class="what-is">
+  <div class="what-is-inner">
+    <div class="what-is-text">
+      <span class="section-label">What is Velox?</span>
+      <h2>Arch Linux — without the headaches</h2>
+      <p>Velox (Latin: <em>swift, fast, rapid</em>) is an Arch-based distribution that gives you the full power of a rolling-release system with a polished installer, a curated software stack, and a custom control center that solves the four most common reasons people give up on Arch.</p>
+      <p>Three fully-themed desktops — KDE Plasma, Cinnamon, and XFCE — all running Wayland. Choose at install time.</p>
+      <div class="stat-row">
+        <div class="stat"><span>3</span><small>Desktop Choices</small></div>
+        <div class="stat"><span>4</span><small>Arch Problems Fixed</small></div>
+        <div class="stat"><span>15</span><small>Custom Wallpapers</small></div>
+        <div class="stat"><span>25×</span><small>Faster Downloads</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── VELOX CONTROL CENTER ─── -->
+<section class="vcc" id="control-center">
+  <div class="vcc-inner">
+    <div class="section-header">
+      <span class="section-label">Velox Control Center</span>
+      <h2>The heart of Velox Linux</h2>
+      <p>One app for everything — updates, drivers, kernels, AUR installs, snapshots, and more.</p>
+    </div>
+
+    <div class="vcc-screenshots">
+      <div class="vcc-tabs">
+        <button class="tab-btn active" onclick="showTab(0)">Home</button>
+        <button class="tab-btn" onclick="showTab(1)">Updates &amp; News</button>
+        <button class="tab-btn" onclick="showTab(2)">GPU Drivers</button>
+      </div>
+      <div class="vcc-img-wrap">
+        <img id="vcc-img-0" src="img/control-center-1.png" alt="Velox Control Center" class="vcc-img active" />
+        <img id="vcc-img-1" src="img/control-center-2.png" alt="Velox Control Center Updates" class="vcc-img" />
+        <img id="vcc-img-2" src="img/control-center-3.png" alt="Velox Control Center GPU Drivers" class="vcc-img" />
+      </div>
+    </div>
+
+    <div class="vcc-features">
+      <div class="vcc-feat">
+        <div class="feature-icon">📦</div>
+        <h3>Unified App Store</h3>
+        <p>Search pacman, Chaotic-AUR, AUR, and Flatpak in one place.</p>
+      </div>
+      <div class="vcc-feat">
+        <div class="feature-icon">🎮</div>
+        <h3>GPU Drivers</h3>
+        <p>Install NVIDIA, AMD, and Intel drivers with a single click.</p>
+      </div>
+      <div class="vcc-feat">
+        <div class="feature-icon">⚙️</div>
+        <h3>Kernel Switcher</h3>
+        <p>Switch between linux-velox, linux-lts, linux-zen, linux-hardened, and linux-rt.</p>
+      </div>
+      <div class="vcc-feat">
+        <div class="feature-icon">🖥</div>
+        <h3>Desktop Environments</h3>
+        <p>Add GNOME, XFCE, Cinnamon, Hyprland, and more alongside KDE.</p>
+      </div>
+      <div class="vcc-feat">
+        <div class="feature-icon">📸</div>
+        <h3>BTRFS Snapshots</h3>
+        <p>Manage Snapper snapshots with a clean GUI — roll back anytime.</p>
+      </div>
+      <div class="vcc-feat">
+        <div class="feature-icon">🔄</div>
+        <h3>One-Click Updates</h3>
+        <p>pacman + Flatpak in one button, with keyring refresh built in.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SECURITY / ARCH FIXES ─── -->
+<section class="security" id="security">
+  <div class="security-inner">
+    <div class="section-header">
+      <span class="section-label">The Arch Problems We Fixed</span>
+      <h2>Four fixes that should ship with every Arch install</h2>
+      <p>These aren't opinions — they're solutions to documented, recurring failures that have appeared in Arch forums and Linux press for years.</p>
+    </div>
+
+    <div class="fix-grid">
+
+      <div class="fix-card">
+        <div class="fix-number">01</div>
+        <div class="fix-icon">📰</div>
+        <h3>Arch Linux News Feed</h3>
+        <div class="fix-problem">
+          <span class="problem-label">The Problem</span>
+          Arch occasionally requires a manual step before running an update — the news feed at archlinux.org is where these are announced. The ArchWiki explicitly says users are expected to check it before every upgrade. Almost nobody does.
+        </div>
+        <div class="fix-solution">
+          <span class="solution-label">The Fix</span>
+          The Control Center fetches the live Arch news feed every time you open the Updates tab. Items less than 14 days old are flagged <strong>RECENT</strong> in orange. If there are recent items when you hit Update All, a warning dialog lists them before proceeding — so required manual steps are never missed.
+        </div>
+      </div>
+
+      <div class="fix-card">
+        <div class="fix-number">02</div>
+        <div class="fix-icon">🔑</div>
+        <h3>Auto Keyring Refresh</h3>
+        <div class="fix-problem">
+          <span class="problem-label">The Problem</span>
+          GPG keyring errors have been one of the top recurring support topics on the Arch forums since 2015. When <code>archlinux-keyring</code> goes stale, pacman throws <code>invalid or corrupted package (PGP signature)</code> errors and refuses to update entirely. pacman depends on a keyring it doesn't automatically keep fresh.
+        </div>
+        <div class="fix-solution">
+          <span class="solution-label">The Fix</span>
+          On every launch, the Control Center silently checks the age of <code>archlinux-keyring</code>. If it's older than 7 days it refreshes it in the background via pkexec — no user action needed. Update All always refreshes the keyring first, so updates can never fail on expired keys.
+        </div>
+      </div>
+
+      <div class="fix-card">
+        <div class="fix-number">03</div>
+        <div class="fix-icon">🛡</div>
+        <h3>AUR Security Scanner</h3>
+        <div class="fix-problem">
+          <span class="problem-label">The Problem</span>
+          The AUR is unmoderated. In July 2025, three AUR packages — <code>librewolf-fix-bin</code>, <code>firefox-patch-bin</code>, and <code>zen-browser-patched-bin</code> — were found to be actively malicious, running cryptocurrency miners and exfiltrating credentials. AUR helpers like paru and yay have no built-in scanning.
+        </div>
+        <div class="fix-solution">
+          <span class="solution-label">The Fix</span>
+          Every AUR package installed through the Velox Control Center is scanned by <code>velox-pkgcheck</code> before installation. It reviews the PKGBUILD for suspicious patterns, outbound network calls, eval/exec usage, and obfuscated code. A severity rating is shown and you can cancel or proceed.
+        </div>
+      </div>
+
+      <div class="fix-card">
+        <div class="fix-number">04</div>
+        <div class="fix-icon">🔒</div>
+        <h3>Partial Update Protection</h3>
+        <div class="fix-problem">
+          <span class="problem-label">The Problem</span>
+          Installing a package without first running a full system update is one of the most reliable ways to break Arch. Arch is rolling and uses the latest library versions — a new package expecting <code>libfoo.so.6</code> when your system has <code>libfoo.so.5</code> silently breaks other software. The ArchWiki explicitly states: <em>"Partial upgrades are unsupported on Arch Linux."</em> Nothing enforces it.
+        </div>
+        <div class="fix-solution">
+          <span class="solution-label">The Fix</span>
+          Every time you install a pacman package through the Control Center, it checks when the package database was last synced. If it's been over 1 hour, a warning dialog appears offering to run a full <code>pacman -Syu</code> first — preventing the most common cause of broken Arch installations.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- ─── FEATURES ─── -->
 <section class="features" id="features">
-  <div class="section-header">
-    <span class="section-label">Why Velox</span>
-    <h2>Everything you need, nothing you don't</h2>
-    <p>Built on Arch with a focused set of sensible defaults.</p>
-  </div>
-  <div class="features-grid">
-    <div class="feature-card">
-      <div class="feature-icon">⚡</div>
-      <h3>Arch-based Rolling Release</h3>
-      <p>Always up-to-date software from the Arch Linux repositories. Install once, update forever — no version upgrades needed.</p>
+  <div class="features-inner">
+    <div class="section-header">
+      <span class="section-label">What's Included</span>
+      <h2>Everything you need, nothing you don't</h2>
     </div>
-    <div class="feature-card">
-      <div class="feature-icon">🖥</div>
-      <h3>Three Desktop Choices</h3>
-      <p>Pick KDE Plasma, Cinnamon, or XFCE at install time. Each is fully themed and tuned for the Velox experience.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">🌊</div>
-      <h3>Wayland-first</h3>
-      <p>All three desktops run on Wayland by default, giving you smooth rendering, HDR-ready pipelines, and better GPU integration.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">🎨</div>
-      <h3>Cohesive Velox Theme</h3>
-      <p>A unified dark-green aesthetic — Fluent-Velox-Dark GTK theme, Newaita-Velox icon pack, and matching wallpapers across every desktop.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">📦</div>
-      <h3>Calamares Installer</h3>
-      <p>Graphical partitioner with Btrfs subvolume support, timezone/locale setup, and per-desktop package selection built in.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">🔐</div>
-      <h3>Minimal Bloat</h3>
-      <p>Only the tools you actually use. No bundled office suites, no trialware — just a clean base with Firefox and the essentials.</p>
+
+    <div class="features-cols">
+      <div class="feat-group">
+        <h3 class="feat-group-title">Performance</h3>
+        <ul class="feat-list">
+          <li><strong>linux-velox</strong> — custom performance-tuned kernel based on CachyOS</li>
+          <li><strong>CPU governor locked to <code>performance</code></strong> on boot</li>
+          <li><strong>Ananicy-cpp</strong> + CachyOS rules — automatic process priority management</li>
+          <li><strong>Zram</strong> — compressed RAM swap for better memory efficiency</li>
+          <li><strong>irqbalance</strong> — optimized interrupt handling</li>
+          <li><strong>ParallelDownloads = 25</strong> — faster package installs</li>
+        </ul>
+      </div>
+
+      <div class="feat-group">
+        <h3 class="feat-group-title">Software</h3>
+        <ul class="feat-list">
+          <li>Firefox · VLC · qBittorrent</li>
+          <li>Kdenlive · OBS Studio · GIMP · Inkscape · Krita</li>
+          <li>Visual Studio Code · Sublime Text</li>
+          <li>Steam · Lutris · Heroic · Bottles · MangoHud</li>
+          <li>Paru + Yay AUR helpers pre-installed</li>
+          <li>Flatpak ready out of the box</li>
+        </ul>
+      </div>
+
+      <div class="feat-group">
+        <h3 class="feat-group-title">System</h3>
+        <ul class="feat-list">
+          <li><strong>hblock</strong> — system-level ad and malware blocking</li>
+          <li><strong>Calamares installer</strong> — graphical, fully Velox-branded</li>
+          <li>Gparted + KDE Partition Manager</li>
+          <li>Btop + Resources + Glances — system monitoring</li>
+          <li>Hardinfo2 + hw-probe — hardware diagnostics</li>
+          <li>Snapper BTRFS snapshots via Control Center</li>
+        </ul>
+      </div>
+
+      <div class="feat-group">
+        <h3 class="feat-group-title">NVIDIA Handling</h3>
+        <ul class="feat-list">
+          <li>Live environment runs on open source mesa/nouveau</li>
+          <li>Calamares <strong>auto-detects your GPU</strong> via lspci at install time</li>
+          <li>nvidia-open-dkms + nvidia-utils installed automatically on NVIDIA hardware</li>
+          <li>NVIDIA GRUB entries only added when NVIDIA is detected</li>
+          <li>Keeps the ISO lean — no DKMS modules for hardware you don't have</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
@@ -99,12 +262,13 @@
         <div class="desktop-card-icon">💎</div>
         <h3>KDE Plasma</h3>
         <span class="de-tag">Wayland · Plasma 6</span>
-        <p>The flagship Velox desktop. Powerful, customizable, and beautiful — KDE Plasma 6 on Wayland with ksmoothdock and a hand-tuned panel layout.</p>
+        <p>The flagship Velox desktop. KDE Plasma 6 on Wayland with ksmoothdock, Panel Colorizer, and Papirus-Green icon theme.</p>
         <ul>
           <li>Plasma 6 on Wayland</li>
           <li>ksmoothdock launcher</li>
           <li>Papirus-Green icon theme</li>
           <li>Panel Colorizer integration</li>
+          <li>Custom Velox SDDM theme</li>
         </ul>
       </div>
 
@@ -112,11 +276,11 @@
         <div class="desktop-card-icon">🌿</div>
         <h3>Cinnamon</h3>
         <span class="de-tag">Wayland · Cinnamon 6</span>
-        <p>The familiar, traditional layout on a modern Wayland stack. Nemo file manager, green-accented menus, and Fluent-Velox-Dark GTK theme throughout.</p>
+        <p>Familiar traditional layout on a modern Wayland stack. Nemo file manager with green-accented menus and Fluent-Velox-Dark GTK theme throughout.</p>
         <ul>
           <li>Cinnamon 6 on Wayland</li>
           <li>Fluent-Velox-Dark GTK theme</li>
-          <li>Newaita-Velox icons</li>
+          <li>Newaita-Velox icon pack</li>
           <li>Green hover accents in Nemo</li>
         </ul>
       </div>
@@ -125,7 +289,7 @@
         <div class="desktop-card-icon">🪟</div>
         <h3>XFCE</h3>
         <span class="de-tag">Wayland · labwc compositor</span>
-        <p>Lightweight and fast. XFCE panels replaced with Waybar on top and Crystal Dock on the bottom, all styled with Velox dark-green colors.</p>
+        <p>Lightweight and fast. XFCE panels replaced with Waybar on top and Crystal Dock on the bottom, styled with Velox dark-green colors.</p>
         <ul>
           <li>labwc Wayland compositor</li>
           <li>Waybar top panel</li>
@@ -138,7 +302,7 @@
   </div>
 </section>
 
-<!-- ─── SYSTEM REQUIREMENTS ─── -->
+<!-- ─── REQUIREMENTS ─── -->
 <section class="requirements" id="requirements">
   <div class="req-inner">
     <div class="section-header">
@@ -170,6 +334,22 @@
   </div>
 </section>
 
+<!-- ─── INSTALLATION ─── -->
+<section class="install">
+  <div class="install-inner">
+    <div class="section-header">
+      <span class="section-label">Installation</span>
+      <h2>Up and running in minutes</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><span class="step-num">1</span><div><strong>Download the ISO</strong><p>From SourceForge below — one ISO, all three desktops.</p></div></div>
+      <div class="step"><span class="step-num">2</span><div><strong>Flash to USB</strong><p>Use <a href="https://www.ventoy.net" target="_blank" rel="noopener">Ventoy</a> or <a href="https://etcher.balena.io" target="_blank" rel="noopener">Balena Etcher</a>.</p></div></div>
+      <div class="step"><span class="step-num">3</span><div><strong>Boot &amp; Install</strong><p>Calamares installer launches automatically.</p></div></div>
+      <div class="step"><span class="step-num">4</span><div><strong>Done</strong><p>NVIDIA drivers install automatically if detected. Reboot and log in.</p></div></div>
+    </div>
+  </div>
+</section>
+
 <!-- ─── DOWNLOAD ─── -->
 <section class="download" id="download">
   <div class="download-card">
@@ -186,7 +366,6 @@
         Browse all files →
       </a>
     </div>
-
     <div class="checksums">
       <h4>Checksums</h4>
       <div class="checksum-row">
@@ -204,12 +383,20 @@
 <!-- ─── FOOTER ─── -->
 <footer>
   <div class="footer-links">
-    <a href="https://github.com/thelinuxtubetltos/velox-iso" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://github.com/thelinutubetltos/velox-iso" target="_blank" rel="noopener">GitHub</a>
     <a href="https://sourceforge.net/projects/velox-linux/" target="_blank" rel="noopener">SourceForge</a>
     <a href="https://www.youtube.com/@thelinuxtube" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://discord.gg/htBPZ3Sb" target="_blank" rel="noopener">Discord</a>
   </div>
-  <p>Velox Linux is free and open-source software. &nbsp;·&nbsp; Built with love on Arch.</p>
+  <p>Velox Linux is free and open-source software. &nbsp;·&nbsp; Built by The Linux Tube. &nbsp;·&nbsp; Shape It. Race It. Own It.</p>
 </footer>
+
+<script>
+function showTab(n) {
+  document.querySelectorAll('.vcc-img').forEach((el, i) => el.classList.toggle('active', i === n));
+  document.querySelectorAll('.tab-btn').forEach((el, i) => el.classList.toggle('active', i === n));
+}
+</script>
 
 </body>
 </html>
