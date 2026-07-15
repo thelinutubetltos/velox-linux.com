@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cinnamon — Velox Linux</title>
+  <meta name="description" content="Velox Linux Cinnamon desktop — Cinnamon 6 on Wayland with Fluent-Velox-Dark theming, glass hover effects, and Velox green accents throughout." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .de-hero {
+      padding: 5rem 2rem 3rem;
+      max-width: 960px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .de-hero .section-label {
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+    .de-hero h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+    .de-hero h1 span { color: var(--green); }
+    .de-hero p {
+      font-size: 1.1rem;
+      color: var(--text-dim);
+      max-width: 640px;
+      margin: 0 auto 2rem;
+    }
+    .de-tags {
+      display: flex;
+      gap: .6rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+    .de-tag {
+      background: var(--green-bg);
+      color: var(--green);
+      border: 1px solid var(--green-dim);
+      border-radius: 20px;
+      padding: .3rem .9rem;
+      font-size: .8rem;
+      font-weight: 600;
+      letter-spacing: .04em;
+    }
+
+    .screenshots {
+      max-width: 1100px;
+      margin: 0 auto 5rem;
+      padding: 0 2rem;
+    }
+    .screenshots h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: var(--text);
+    }
+    .screenshot-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+      gap: 1.5rem;
+    }
+    .screenshot-item {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: var(--card);
+    }
+    .screenshot-item img {
+      width: 100%;
+      display: block;
+    }
+    .screenshot-item figcaption {
+      padding: .75rem 1rem;
+      font-size: .85rem;
+      color: var(--text-dim);
+    }
+
+    .de-detail {
+      max-width: 960px;
+      margin: 0 auto 5rem;
+      padding: 0 2rem;
+    }
+    .de-detail h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: .5rem;
+      color: var(--text);
+    }
+    .de-detail .section-intro {
+      color: var(--text-dim);
+      margin-bottom: 2rem;
+      font-size: 1rem;
+    }
+    .detail-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+    .detail-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+    }
+    .detail-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--green);
+      margin-bottom: .75rem;
+    }
+    .detail-card p {
+      font-size: .9rem;
+      color: var(--text-dim);
+      line-height: 1.6;
+    }
+    .detail-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .detail-card ul li {
+      font-size: .9rem;
+      color: var(--text-dim);
+      padding: .3rem 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+    }
+    .detail-card ul li:last-child { border-bottom: none; }
+    .detail-card ul li::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--green);
+      flex-shrink: 0;
+    }
+
+    .color-row {
+      display: flex;
+      gap: .75rem;
+      flex-wrap: wrap;
+      margin-top: .75rem;
+    }
+    .color-chip {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      font-size: .8rem;
+      color: var(--text-dim);
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .color-swatch {
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      color: var(--text-dim);
+      font-size: .9rem;
+      margin: 2rem 2rem 0;
+      transition: color .2s;
+    }
+    .back-link:hover { color: var(--green); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<!-- ─── NAV ─── -->
+<nav>
+  <a class="nav-logo" href="index.html">Velox Linux</a>
+  <ul class="nav-links">
+    <li><a href="index.html#new-to-linux">New to Linux?</a></li>
+    <li><a href="index.html#control-center">Control Center</a></li>
+    <li><a href="index.html#desktops">Desktops</a></li>
+    <li><a href="index.html#download" class="nav-cta">Download</a></li>
+  </ul>
+</nav>
+
+<a class="back-link" href="index.html">← Back to Velox Linux</a>
+
+<!-- ─── HERO ─── -->
+<section class="de-hero">
+  <span class="section-label">Desktop Environment</span>
+  <h1><span>Cinnamon</span></h1>
+  <p>A familiar, traditional desktop layout on a modern Wayland stack. Fluent-Velox-Dark theming with Velox green glass hover effects across every panel, menu, and app.</p>
+  <div class="de-tags">
+    <span class="de-tag">Cinnamon 6</span>
+    <span class="de-tag">Wayland</span>
+    <span class="de-tag">Fluent-Velox-Dark</span>
+    <span class="de-tag">Newaita-Velox Icons</span>
+    <span class="de-tag">Nemo File Manager</span>
+    <span class="de-tag">Glass Hover Effects</span>
+  </div>
+</section>
+
+<!-- ─── SCREENSHOTS ─── -->
+<section class="screenshots">
+  <h2>Screenshots</h2>
+  <div class="screenshot-grid">
+    <figure class="screenshot-item">
+      <img src="img/cinnamon-de-1.png" alt="Velox Cinnamon desktop overview" />
+      <figcaption>Desktop overview — Fluent-Velox-Dark theme, Velox green panel accents, Newaita-Velox icons</figcaption>
+    </figure>
+    <figure class="screenshot-item">
+      <img src="img/cinnamon-de-2.png" alt="Velox Cinnamon with apps open" />
+      <figcaption>Apps open — glass hover effects in menus, taskbar, and context menus throughout</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ─── WHAT WE DID ─── -->
+<section class="de-detail">
+  <h2>What was customised</h2>
+  <p class="section-intro">Cinnamon's default blues are replaced throughout with Velox green — panel, menus, icons, and the app launcher all match.</p>
+  <div class="detail-grid">
+
+    <div class="detail-card">
+      <h3>Panel &amp; Taskbar</h3>
+      <p>Panel buttons, the app launcher, system tray icons, clock, and taskbar window buttons all use <strong>#8ab87a</strong> Velox green. Text is set to a medium grey (<code>#BFBFBF</code>) for readability without being harsh white.</p>
+    </div>
+
+    <div class="detail-card">
+      <h3>Glass Hover Effects</h3>
+      <p>Every interactive element has a consistent glass hover: semi-transparent white fill with a green left-edge accent stripe. Applied across the app menu, category list, favourites, popup menus, panel buttons, taskbar, and workspace switcher.</p>
+    </div>
+
+    <div class="detail-card">
+      <h3>App Menu — Cinnamon 6</h3>
+      <p>Cinnamon 6 renamed its menu CSS classes to <code>appmenu-*</code>. All hover states target both the new <code>appmenu-*</code> and legacy <code>menu-*</code> names so the glass effect lands correctly on every element including favourites, categories, and app list rows.</p>
+    </div>
+
+    <div class="detail-card">
+      <h3>GTK Theme — Fluent-Velox-Dark</h3>
+      <p>A custom fork of Fluent-grey-Dark with Velox green glass hover in Nemo and all GTK apps. Uses <code>linear-gradient</code> for the glass effect and pre-allocated transparent borders to prevent layout shift on hover.</p>
+    </div>
+
+    <div class="detail-card">
+      <h3>Icons — Newaita-Velox</h3>
+      <p>A custom icon theme inheriting from Newaita with all folder icons recoloured to <strong>#8ab87a</strong> muted green. The desktop folder icon SVG blue tones are also patched to Velox green at install time.</p>
+    </div>
+
+    <div class="detail-card">
+      <h3>Workspace Switcher OSD</h3>
+      <p>The workspace switcher overlay popup is fully themed — dark background, grey text, and the active workspace dot uses Velox green instead of the default blue. The label inside the OSD required direct <code>StLabel</code> targeting as font styles don't cascade into St children.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── THEMING INFO ─── -->
+<section class="de-detail">
+  <h2>Theming details</h2>
+  <p class="section-intro">Technical reference for the colors and components used across the Cinnamon desktop.</p>
+  <div class="detail-grid">
+
+    <div class="detail-card">
+      <h3>Colors</h3>
+      <div class="color-row">
+        <span class="color-chip"><span class="color-swatch" style="background:#8ab87a;"></span>#8ab87a — Velox green (muted)</span>
+      </div>
+      <div class="color-row">
+        <span class="color-chip"><span class="color-swatch" style="background:#6dab74;"></span>#6dab74 — Velox green (icon accent)</span>
+      </div>
+      <div class="color-row">
+        <span class="color-chip"><span class="color-swatch" style="background:#BFBFBF; border-color:#444;"></span>#BFBFBF — Panel text</span>
+      </div>
+      <div class="color-row">
+        <span class="color-chip"><span class="color-swatch" style="background:#3c3c3c; border-color:#444;"></span>#3c3c3c — Popup menu background</span>
+      </div>
+    </div>
+
+    <div class="detail-card">
+      <h3>Components</h3>
+      <ul>
+        <li>Shell theme: Fluent-Velox-Dark</li>
+        <li>GTK theme: Fluent-Velox-Dark</li>
+        <li>Icons: Newaita-Velox</li>
+        <li>Cursor: Adwaita</li>
+        <li>File manager: Nemo (green-accented)</li>
+        <li>Font: Noto Sans 11pt</li>
+        <li>Session: Cinnamon Wayland</li>
+      </ul>
+    </div>
+
+    <div class="detail-card">
+      <h3>Glass hover effect</h3>
+      <p>Consistent across all interactive elements:</p>
+      <ul>
+        <li>Background: rgba(255,255,255, 0.10)</li>
+        <li>Top highlight: rgba(255,255,255, 0.30) inset</li>
+        <li>Bottom shadow: rgba(0,0,0, 0.35) inset</li>
+        <li>Left accent: rgba(138,184,122, 1.0) — 2px green stripe</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer style="text-align:center; padding: 3rem 2rem; color: var(--text-muted); font-size:.85rem; border-top: 1px solid var(--border); margin-top: 2rem;">
+  <p>Velox Linux &nbsp;·&nbsp; <a href="index.html">Back to main site</a> &nbsp;·&nbsp; <a href="https://github.com/thelinutubetltos/velox-iso" target="_blank" rel="noopener">GitHub</a></p>
+</footer>
+
+</body>
+</html>
